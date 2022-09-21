@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"
+      type="text/javascript"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/script.js" type="text/javascript" defer></script>
+    <title>10 random emails</title>
+  </head>
+  <body>
+    <div id="app">
+      <div v-if="loading" class="loading">LOADING</div>
+      <div v-else>
+        <div v-for="mail in emails">{{mail}}</div>
+      </div>
+    </div>
+  </body>
+</html>
